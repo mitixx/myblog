@@ -6,193 +6,31 @@ draft: false
 summary: '今年もisuconに参加したよ！（2かいめ）'
 ---
 
-# Introduction
+今年もisuconに参加しました！
+私は昨年isucon12から参加し始めて今回で2回目。
+前回は会社から3人でチームを組み初出場したものの、初回参加で要領も分からないまま初期から点を上げることができず惨敗してしまった。
+昨年はクエリやパフォーマンス分析を担当したものの、できたことがインデックス追加しか行えず終わってしまった。
+猛者ひしめく中初めて参加してみて、あまりに知らないことの多さに圧倒されて終わった。
+(特にSQLiteがその最もたるもの)
 
-Markdown and Mdx parsing is supported via `unified`, and other remark and rehype packages. `next-mdx-remote` allows us to parse `.mdx` and `.md` files in a more flexible manner without touching webpack.
+## チーム
 
-GitHub flavored markdown is used. `mdx-prism` provides syntax highlighting capabilities for code blocks. Here's a demo of how everything looks.
+今回はめゆうとチーム　おねんねすやすやぴ〜　を組んで2人で出場した。
+相方の感想記事はこちら
+https://ctsetera.dev/2023/11/27/01.html
 
-The following markdown cheatsheet is adapted from: https://guides.github.com/features/mastering-markdown/
+## 今回の目標
 
-# What is Markdown?
+まずはどんな形であれ1000〜5000点上げることを達成したかった。
+あまりにも小さい目標かもしれないが、確実にコミットしたかった。
+あとはnginxという未知の塊を理解することから始めた。
+そのため今回はサーバーサイドのパフォーマンスチューニングに重きを置いて担当した。
+goに関しても詰めきれなかったが、これは来年goの設計や機能を理解して取り組もうとしている次第です。
 
-Markdown is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like `#` or `*`.
+## 結果
 
-# Syntax guide
+今回9000点を記録できた。
+初期から6000点ほど増えた形となり、今回の目標は到達できた。
 
-Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com or in your own text files.
-
-## Headers
-
-```
-# This is a h1 tag
-
-## This is a h2 tag
-
-#### This is a h4 tag
-```
-
-# This is a h1 tag
-
-## This is a h2 tag
-
-#### This is a h4 tag
-
-## Emphasis
-
-```
-_This text will be italic_
-
-**This text will be bold**
-
-_You **can** combine them_
-```
-
-_This text will be italic_
-
-**This text will be bold**
-
-_You **can** combine them_
-
-## Lists
-
-### Unordered
-
-```
-- Item 1
-- Item 2
-  - Item 2a
-  - Item 2b
-```
-
-- Item 1
-- Item 2
-  - Item 2a
-  - Item 2b
-
-### Ordered
-
-```
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
-```
-
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
-
-## Images
-
-```
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
-Format: ![Alt Text](url)
-```
-
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
-
-## Links
-
-```
-http://github.com - automatic!
-[GitHub](http://github.com)
-```
-
-http://github.com - automatic!
-[GitHub](http://github.com)
-
-## Blockquotes
-
-```
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
-```
-
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
-
-## Inline code
-
-```
-I think you should use an
-`<addr>` element here instead.
-```
-
-I think you should use an
-`<addr>` element here instead.
-
-## Syntax highlighting
-
-Here’s an example of how you can use syntax highlighting with [GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/):
-
-````
-```js:fancyAlert.js
-function fancyAlert(arg) {
-  if (arg) {
-    $.facebox({ div: '#foo' })
-  }
-}
-```
-````
-
-And here's how it looks - nicely colored with styled code titles!
-
-```js:fancyAlert.js
-function fancyAlert(arg) {
-  if (arg) {
-    $.facebox({ div: '#foo' })
-  }
-}
-```
-
-## Footnotes
-
-```
-Here is a simple footnote[^1]. With some additional text after it.
-
-[^1]: My reference.
-```
-
-Here is a simple footnote[^1]. With some additional text after it.
-
-[^1]: My reference.
-
-## Task Lists
-
-```
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
-```
-
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
-
-## Tables
-
-You can create tables by assembling a list of words and dividing them with hyphens `-` (for the first row), and then separating each column with a pipe `|`:
-
-```
-| First Header                | Second Header                |
-| --------------------------- | ---------------------------- |
-| Content from cell 1         | Content from cell 2          |
-| Content in the first column | Content in the second column |
-```
-
-| First Header                | Second Header                |
-| --------------------------- | ---------------------------- |
-| Content from cell 1         | Content from cell 2          |
-| Content in the first column | Content in the second column |
-
-## Strikethrough
-
-Any word wrapped with two tildes (like `~~this~~`) will appear ~~crossed out~~.
+2回目に参加して感じるのが、自動化をもっと行うべきだと感じた。
+8時間が長いようで一瞬で、その間に膨大な問題や課題に取り組むには手動では間に合わず限界を感じている。
