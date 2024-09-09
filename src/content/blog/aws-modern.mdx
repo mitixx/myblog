@@ -1,0 +1,39 @@
+---
+title: '「AWSで実現するモダンアプリケーション入門」はクラウドを扱うエンジニアとして最高の本'
+date: '2024-09-09'
+tags: ['aws']
+draft: false
+summary: '「AWSで実現するモダンアプリケーション入門」から。神書籍'
+---
+
+時間があったので「AWSで実現するモダンアプリケーション入門」を読んでいます。
+一言で「神書籍」
+
+https://amzn.to/47A6SvD
+
+現代の開発で起こりうるあらゆる問題や課題を解決するための手立てが解説されています。
+
+この書籍内で、自身がこれまでに知らなかったawsでの手法についてブログ記事としてピックアップして、随時追加します。
+
+## 1.awsを使ってアプリケーション外で設定を一括管理する
+awsのサービスとして設定情報管理を行えるサービスが展開されている
+
+これにより、アプリケーション内部で環境変数を定義して設定情報を管理するなどのアプリケーションに蜜結合した状態を回避できる
+
+gitignoire忘れで設定（特にアクセスキー関連）をgit pushしてしまうリスク対策にもなる様子なことと、awsで構築されたサービスであればスムーズに利用できる
+
+**<span style="color: red; ">リクエスト数による課金が存在するので使い分けなど注意</span>**
+
+- aws systems manager parameter store
+- aws secrets manager
+
+https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/systems-manager-parameter-store.html
+https://aws.amazon.com/jp/secrets-manager/
+
+使い分けに関しては詳しく書かれている[こちらの記事](https://qiita.com/tomoya_oka/items/a3dd44879eea0d1e3ef5)を参照
+
+
+
+
+
+
