@@ -20,6 +20,8 @@ awsのサービスとして設定情報管理を行えるサービスが展開�
 
 これにより、アプリケーション内部で環境変数を定義して設定情報を管理するなどのアプリケーションに蜜結合した状態を回避できる
 
+→つまるところ同時にこれは設定変更によるアプリケーションの再デプロイを避けられる
+
 gitignoire忘れで設定（特にアクセスキー関連）をgit pushしてしまうリスク対策にもなる様子なことと、awsで構築されたサービスであればスムーズに利用できる
 
 **<span style="color: red; ">リクエスト数による課金が存在するので使い分けなど注意</span>**
@@ -31,6 +33,34 @@ https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/systems-manag
 https://aws.amazon.com/jp/secrets-manager/
 
 使い分けに関しては詳しく書かれている[こちらの記事](https://qiita.com/tomoya_oka/items/a3dd44879eea0d1e3ef5)を参照
+
+## 2.コンテナをaws上にデプロイする場合はFargateを検討
+
+EC2上にコンテナを設置すると、コンテナランタイム等のEC2インスタンス管理が発生するのは必須だが、
+Fargateを利用した方がアプリケーション開発に注力できる。
+
+以下は自身で調べた疑問点
+
+### コストや代替手法
+Fargateのコストは高めなので、ECS on EC2も検討できる模様
+
+https://tech.uzabase.com/entry/2022/12/01/175423
+
+また、EC2が向いているケースもある様子
+
+https://techblog.zozo.com/entry/reconfigure-eks-workflow-infrastructure
+
+## 3.パイプライン・ファースト
+
+CI/CDは開発初期に用意することで、開発が進むことで開発フローが変化したとしても少ない労力でパイプラインの変更が行える。
+
+これは既存のデプロイプロセス（本番環境）などへの影響といったリスクの削減に繋がる。
+
+## 4.デプロイ方式について
+
+- ローリングデプロイ
+- Blue/Greenデプロイ
+
 
 
 
